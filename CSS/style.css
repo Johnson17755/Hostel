@@ -1,0 +1,294 @@
+ /* Table of content */
+ /* -----------------
+ general
+ Navbar
+ Slider 
+ About 
+ Rooms 
+ Services 
+ Team 
+ Gallery
+ Pricing
+ Blog
+ Footer 
+ --------------- */
+
+/* General */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins', sans-serif;
+}
+
+:root{
+    /* background color */
+    --primary-color: #021832;
+    --secondary-color: #caa169;
+    --bg-color: #f4f4f4;
+    --bg-white: #fff;
+    --bg-black: #000;
+    /* Text Styling  */
+    --primary-text: #021832;
+    --secondary-text: #caa169;
+    --text-black: #151515;
+    --text-gray: #e4e4e4;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background-color: var(--bg-white);
+}
+
+a{
+    text-decoration: none;
+}
+
+::-webkit-scrollbar{
+    width: .375rem;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+}
+
+section{
+    padding: 3.125rem 0;
+    
+}
+
+.main-btn{
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+    background-size: 250%;
+    background-position: left;
+    color: #ffd277;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 1s;
+    overflow: hidden;
+}
+  
+.main-btn::before {
+    position: absolute;
+    content: "BOOK NOW";
+    color: #ffd277;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 8px;
+    transition-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.842);
+    background-size: 200%;
+}
+  
+.main-btn:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+.main-btn:hover::before {
+    background-position: right;
+    transition-duration: 1s;
+} 
+.main-btn:active {
+    transform: scale(0.95);
+}
+
+h1{
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    color: var(--bg-white);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+h3{
+    margin-bottom: 1.875rem;
+    line-height: 2.875rem;
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--primary-text);
+}
+
+h3 span{
+    color: var(--secondary-color);
+}
+
+h5{
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+h6{
+    font-size: .875rem;
+    color: var(--primary-text);
+    margin-bottom: .9375rem;
+    font-weight: 300;
+}
+
+p{
+    font-size: 1rem;
+    color: var(--text-black);
+    line-height: 1.625rem;
+}
+
+.section-title:after{
+    content: "";
+    background-image: url() no-repeat;
+    background-position: center center;
+    display: block;
+    margin-top: -0.9375rem;
+    height: .9375rem;
+}
+
+ /* Navbar  */
+.header_wrapper .navbar{
+    padding: .9375rem 0;
+    background-color: var(--bg-white);
+    -webkit-box-shadow: 0 .5rem .375rem rgba(0 0 0 / 40%);
+    box-shadow: 0 .5rem .375rem rgba(0 0 0 / 40%);
+    -webkit-transition:background 0s ease-in-out 0s, margin-top 0s ease-in-out 0s, opacity 0s ease-in-out 0s;
+    transition:background 0s ease-in-out 0s, margin-top 0s ease-in-out 0s, opacity 0s ease-in-out 0s;
+}
+
+.header_wrapper .navbar-toggler{
+    border: 0;
+    color: var(--primary-text);
+    line-height: 1;
+}
+
+.header_wrapper .navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.header_wrapper .nav-item{
+    margin: 0 .625rem;
+}
+
+.header_wrapper .nav-item .nav-link{
+    font: 1rem;
+    font-weight: 500;
+    color: var(--primary-text);
+    display: inline-block;
+}
+
+.header_wrapper .nav-item .nav-link:hover,
+.header_wrapper .nav-item .nav-link:active{
+    color: var(--secondary-text);
+}
+
+.navbar .header-scrolled{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: rgba(255, 255, 255,.85);
+    -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+
+@keyframes fadeInDown {
+    0%{
+        top:-30%;
+    }
+    50%{
+        top:-15%;
+    }
+    100%{
+        top:0;
+    }
+}
+ /* Banner */
+.banner_wrapper{
+    height: 40.625rem;
+    width: 100%;
+}
+.banner_wrapper .swiper{
+    width: 100%;
+    height: 100%;
+}
+.banner_wrapper .swiper-slide{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.banner_wrapper .swiper-slide::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-black);
+    opacity: 0.5;
+    z-index: 0;
+}
+.banner_wrapper .swiper-pagination-bullets .swiper-pagination-bullet{
+    width: .9999rem;
+    height: .9995rem;
+    background-color: var(--secondary-color);
+    border:0.0625rem solid var(--bg-white);
+}
+.banner_wrapper .swiper .slide-caption{
+    height: 100%;
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner_wrapper .swiper .slide-caption p{
+    max-width: 37.5rem;
+    margin: auto;
+    color: var(--bg-white);
+}
+.booking-area{
+    background: var(--bg-white);
+    box-shadow: 0 .625rem .9375rem 0 rgba(0 0 0 / 10%);
+    margin-top: -4rem;
+    padding: 3.125rem 1.875rem;
+    z-index: 9999999;
+}
+ /* About */
+
+
+  /* Room */
+
+
+  /* Services*/
+
+
+ /* Team  */
+
+
+ /* Gallery */
+
+
+ /* Pricing */
+
+
+ /* Blog */
+
+
+ /* Footer */
