@@ -107,6 +107,18 @@ section{
 .main-btn:active {
     transform: scale(0.95);
 }
+.sec-btn{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    background-color: transparent;
+    border-radius: 0.625rem solid var(--secondary-color);
+    border-color: var(--bg-black);
+    line-height: 1.75rem;
+    display: inline-block;
+    transition: all 0.3 ease-out 0s;
+}
 
 h1{
     font-size: 3.75rem;
@@ -268,9 +280,27 @@ p{
     box-shadow: 0 .625rem .9375rem 0 rgba(0 0 0 / 10%);
     margin-top: -4rem;
     padding: 3.125rem 1.875rem;
+    position: relative;
     z-index: 9999999;
 }
+.booking-area .form-control,
+.booking-area #form-select{
+    border: .0625rem solid var(--primary-color);
+    height: 2.5rem;
+    text-transform: uppercase;
+    font-size: .875rem;
+    color: var(--text-black);
+    font-weight: 500;
+}
+.booking-area .form-control:focus,
+.booking-area #form-select:focus{
+    outline: none;
+    box-shadow: none;
+}
  /* About */
+ .about_wrapper{
+    padding-top: 9.375rem;
+ }
 
 
   /* Room */
