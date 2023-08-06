@@ -28,7 +28,27 @@ window.onscroll = function () {
     },
   });
   
-
  //counter design
+document.addEventListener('DOMContentLoaded', () => {
+  function counter(id, start, end, duration){
+    let obj = document.getElementById(id),
+    current = start,
+    range = end - start,
+    increase = end > start ? 1 : -1,
+    step = Math.abs(Math.floor(duration / range)),
+    timer = setInterval(() => {
+      current += increase; // Fix variable name here
+      obj.textContent = current;
+      if(current == end){
+        clearInterval(timer);
+      }
+    }, step);
+  }
+  counter("count1", 0 , 1287, 3000);
+  counter("count2", 100 , 1527, 2780);
+  counter("count3", 0 , 1893, 3000);
+  counter("count4", 0 , 7988, 3000);
+});
+
 
  //our partner
