@@ -565,6 +565,10 @@ p{
 }
 
  /* Blog */
-
+.blog_wrapper .blog-content{
+    margin: -5rem 0 0 4.375rem;
+    box-shadow: 0 .125rem .25rem rgb(34 30 31 / 40%);
+    border-radius: 1rem;
+}
 
  /* Footer */
