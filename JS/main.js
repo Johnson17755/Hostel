@@ -50,5 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
   counter("count4", 0 , 7988, 3000);
 });
 
-
  //our partner
